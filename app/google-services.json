@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "352879217551",
+    "firebase_url": "https://movierater-e19d2.firebaseio.com",
+    "project_id": "movierater-e19d2",
+    "storage_bucket": "movierater-e19d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352879217551:android:2d17720a03edf47a8f59fa",
+        "android_client_info": {
+          "package_name": "com.example.movierater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352879217551-qfibgnpq2pptdo41sf9vglli1r76nd0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movierater",
+            "certificate_hash": "e96100f1f252ac85b283fad1d894204afdcb291e"
+          }
+        },
+        {
+          "client_id": "352879217551-fjrelu8fht65mdeg1vs5re8heugutln1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCuWXwuqyYYjD-22atqpA0QGegNGi8V3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352879217551-fjrelu8fht65mdeg1vs5re8heugutln1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
