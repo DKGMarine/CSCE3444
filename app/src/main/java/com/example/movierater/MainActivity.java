@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //Hey
         //new comment
         //josh's comment
+        //cooper's comment >:3
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
