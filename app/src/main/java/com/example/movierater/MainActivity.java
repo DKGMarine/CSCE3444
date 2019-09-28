@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
         myRef.setValue("Hello World");
-        //Hey v2
+        //Hey v3
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
