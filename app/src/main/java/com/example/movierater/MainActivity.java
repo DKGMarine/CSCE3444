@@ -9,39 +9,73 @@ import com.google.firebase.database.*;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
+import android.view.View;
+import android.widget.EditText;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private String TAG = "Damn";
+    Button login;
+    Button signup;
+    EditText email;
+    EditText password;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        login      = findViewById(R.id.login);
+        signup     = findViewById(R.id.signup);
+        email    = findViewById(R.id.email);
+        password = findViewById(R.id.password);
         FirebaseApp.initializeApp(MainActivity.this);
         Toast.makeText(MainActivity.this, "FireBase YE", Toast.LENGTH_LONG).show();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
-        myRef.setValue("Karla 2");
-        //Hey
-        //new comment
-        //josh's comment
-        //cooper's comment >:3
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d(TAG, "Value is: " + value);
-            }
+
+
+        //Signup checks if its aval or not
+        signup.setOnClickListener(new View.OnClickListener(){
 
             @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
+            public void onClick(View v){
+                if (email.getText().toString().matches("") || email.getText().toString().matches("Email") ){
+                    Toast.makeText(MainActivity.this, "Please enter an email", Toast.LENGTH_LONG).show();
+
+                }
+                else if (password.getText().toString().matches("") || password.getText().toString().matches("Password")){
+
+                    Toast.makeText(MainActivity.this, "Password Not Found", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
+
+
+
+        //Login checks if its aval or not
+        login.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+                if (email.getText().toString().matches("") || email.getText().toString().matches("Email") ){
+                    Toast.makeText(MainActivity.this, "Please enter an email", Toast.LENGTH_LONG).show();
+
+                }
+                else if (password.getText().toString().matches("") || password.getText().toString().matches("Password")){
+
+                    Toast.makeText(MainActivity.this, "Password Not Found", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+
 
         //Make Sure google service is up to date for initialize error
         //Do not forget to refactor to solve merger error!
