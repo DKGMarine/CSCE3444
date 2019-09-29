@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "352879217551-cca7jlptnl3j54pl4kkcv22ml4kak039.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movierater",
+            "certificate_hash": "e162c61fe8e1c2fc9cec4809c98349456a467bbd"
+          }
+        },
+        {
           "client_id": "352879217551-qfibgnpq2pptdo41sf9vglli1r76nd0i.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

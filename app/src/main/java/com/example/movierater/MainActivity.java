@@ -2,6 +2,8 @@ package com.example.movierater;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
@@ -11,19 +13,38 @@ import com.google.firebase.database.FirebaseDatabase;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText email, password;
+    android.widget.Button login;
+    User user;
+    DatabaseReference myRef;
     private String TAG = "Damn";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        email = (EditText)findViewById(R.id.email);
+        password = (EditText)findViewById(R.id.password);
+        login = (android.widget.Button)findViewById(R.id.login);
         FirebaseApp.initializeApp(MainActivity.this);
-        Toast.makeText(MainActivity.this, "FireBase YE", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "FireBase connection successful", Toast.LENGTH_LONG).show();
+        user = new User();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
-        myRef.setValue("Hello World");
-        //Hey
+        myRef = database.getReference().child("User");
+
+        login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                user.setEmail(email.getText().toString().trim());
+                user.setPassword(password.getText().toString().trim());
+
+                myRef.push().setValue(user);
+
+                Toast.makeText(MainActivity.this, "Inserted User Successfuly", Toast.LENGTH_LONG).show();
+            }
+
+        });
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
