@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
+    android:paddingRight="45dp"
+    android:paddingLeft="45dp"
     tools:context=".MainActivity">
 
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="0"
+        app:srcCompat="@drawable/streamguidelogo" />
+
     <EditText
-        style="@style/editText_style"
         android:id="@+id/email"
-        android:layout_width="wrap_content"
+        style="@style/editText_style"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Email"
-        android:background= "@color/colorPrimary"
+        android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-    />
+        />
 
     <EditText
+        style="@style/editText_style"
         android:id="@+id/password"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Password"
         android:textAlignment="center"
-        android:background = "@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,32 +55,31 @@
         app:layout_constraintVertical_bias="0.085" />
 
     <Button
+        style="@style/button_style"
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="login"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/signup"
-        android:layout_width="wrap_content"
+        style="@style/button_style"
+        android:id="@+id/sign_up"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Signup"
+        android:text="Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintVertical_bias="0.154" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="285dp"
-        android:layout_height="211dp"
-        app:srcCompat="@drawable/streamguidelogo"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="60dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
+</RelativeLayout>

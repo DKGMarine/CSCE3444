@@ -1,6 +1,8 @@
 package com.example.movierater;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,8 +16,7 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     EditText email, password;
-    android.widget.Button login;
-    User user;
+    android.widget.Button login,sign_up;
     DatabaseReference myRef;
     private String TAG = "Damn";
 
@@ -27,24 +28,37 @@ public class MainActivity extends AppCompatActivity {
         email = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.password);
         login = (android.widget.Button)findViewById(R.id.login);
+        sign_up = (android.widget.Button)findViewById(R.id.sign_up);
         FirebaseApp.initializeApp(MainActivity.this);
         Toast.makeText(MainActivity.this, "FireBase connection successful", Toast.LENGTH_LONG).show();
-        user = new User();
+       // user = new User();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("User");
 
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                user.setEmail(email.getText().toString().trim());
-                user.setPassword(password.getText().toString().trim());
 
-                myRef.push().setValue(user);
 
-                Toast.makeText(MainActivity.this, "Inserted User Successfuly", Toast.LENGTH_LONG).show();
+
+
             }
 
         });
+
+        sign_up.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+                startActivity(new Intent(MainActivity.this, Registration.class));
+
+
+
+
+            }
+
+        });
+
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
