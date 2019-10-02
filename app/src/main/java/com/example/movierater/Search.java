@@ -36,14 +36,14 @@ public class Search extends AppCompatActivity{
         search_btn = (android.widget.Button) findViewById(R.id.search_btn);
         FirebaseApp.initializeApp(Search.this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Movie");
-
+        myRef = database.getReference().child("Movie");
 
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 title = movie.getText().toString().trim();
+
 
                Query query =  myRef.orderByChild("title").equalTo("Interstellar");
                query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -73,20 +73,17 @@ public class Search extends AppCompatActivity{
 
                //Log.d("debug2", m.title);
 
-
-
                 /*
-                m.setTitle("Interstellar");
-                m.setDuration(169);
-                m.setRelease_year(2014);
-                m.setGoogle_play(true);
-                m.setHbo_now(false);
-                m.setNetflix(false);
-                m.setYoutube_tv(true);
-                m.setSling_tv(false);
-                m.setPrime_video(true);
-                m.setHulu(false);
-
+                m.title = "Interstellar";
+                m.duration = 169;
+                m.release_year = 2014;
+                m.google_play = true;
+                m.hbo_now = false;
+                m.netflix = false;
+                m.youtube_tv = true;
+                m.sling_tv = false;
+                m.prime_video = true;
+                m.hulu = false;
                 myRef.push().setValue(m);
                 */
 
