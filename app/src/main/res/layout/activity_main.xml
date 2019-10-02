@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background_test"
     android:paddingRight="45dp"
     android:paddingLeft="45dp"
     tools:context=".MainActivity">
@@ -19,9 +19,8 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_weight="0"
-        app:srcCompat="@drawable/streamguidelogo" />
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/moviebuddy" />
 
     <EditText
         android:id="@+id/email"

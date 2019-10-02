@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
-
+               startActivity(new Intent(MainActivity.this, Search.class));
 
 
             }
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
 
                 startActivity(new Intent(MainActivity.this, Registration.class));
-
 
 
 
