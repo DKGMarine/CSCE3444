@@ -7,7 +7,9 @@
     android:background="@drawable/background_test"
     android:paddingRight="45dp"
     android:paddingLeft="45dp"
-    tools:context=".MainActivity">
+    android:id="@+id/main"
+    tools:context=".MainActivity"
+    >
 
 <LinearLayout
     android:orientation="vertical"

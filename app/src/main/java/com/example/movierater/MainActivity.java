@@ -1,13 +1,18 @@
 package com.example.movierater;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.*;
 import com.google.firebase.database.DatabaseReference;
@@ -19,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
     android.widget.Button login,sign_up;
     DatabaseReference myRef;
     private String TAG = "Damn";
-
+    String password_s;
+    String email_s;
+    RelativeLayout main;
+    User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,19 +39,53 @@ public class MainActivity extends AppCompatActivity {
         sign_up = (android.widget.Button)findViewById(R.id.sign_up);
         FirebaseApp.initializeApp(MainActivity.this);
         Toast.makeText(MainActivity.this, "FireBase connection successful", Toast.LENGTH_LONG).show();
-       // user = new User();
+        main = findViewById(R.id.main);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("User");
 
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-               startActivity(new Intent(MainActivity.this, Search.class));
+
+                email_s = email.getText().toString().trim();
+                password_s = password.getText().toString().trim();
+
+                Query query =  myRef.orderByChild("email").equalTo(email_s);
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
+                            if (dataSnapshot.exists()) {
+
+                                user = snapshot.getValue(User.class);
+
+                                if(user.getPassword().equals(password_s))
+                                   startActivity(new Intent(MainActivity.this, Search.class));
 
 
-            }
+                            }
+                        }
 
-        });
+                                }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+                Snackbar snackbar = Snackbar
+                        .make(main, "Invalid email and/or password", Snackbar.LENGTH_LONG);
+                snackbar.show();
+
+                    }
+
+
+
+
+                });
 
         sign_up.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -7,7 +7,9 @@
     android:background="@drawable/background_test"
     android:paddingRight="45dp"
     android:paddingLeft="45dp"
-    tools:context=".Search">
+    android:id="@+id/search_id"
+    tools:context=".Search"
+    >
 
     <LinearLayout
         android:orientation="vertical"
