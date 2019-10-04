@@ -18,7 +18,7 @@ import com.google.firebase.database.*;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.util.Log;
-//Branch Test
+
 public class MainActivity extends AppCompatActivity {
     EditText email, password;
     android.widget.Button login,sign_up;
