@@ -31,7 +31,6 @@ public class Registration extends AppCompatActivity {
     String email2;
     RelativeLayout regi;
     String p1 , p2;
-    int a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -50,7 +49,7 @@ public class Registration extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                a = 0;
+
                 email2 = email.getText().toString().trim();
                 p1 = password.getText().toString().trim();
                 p2 = password_verify.getText().toString().trim();
@@ -65,11 +64,10 @@ public class Registration extends AppCompatActivity {
 
                             for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                 if (dataSnapshot.exists()) {
-                                    a = 1;
-                                    Log.d("okay",Integer.toString(a));
                                     Snackbar snackbar = Snackbar
                                             .make(regi, "Email already in use", Snackbar.LENGTH_LONG);
                                     snackbar.show();
+                                    startActivity(new Intent(Registration.this, Registration.class));
 
                                 }
 
@@ -90,9 +88,9 @@ public class Registration extends AppCompatActivity {
 
                 }
 
-                Log.d("okay",Integer.toString(a));
 
-                if(p1.equals(p2) && (Integer.toString(a).equals(Integer.toString(0)))) {
+
+                if(p1.equals(p2)) {
                     user.setEmail(email.getText().toString().trim());
                     user.setPassword(password.getText().toString().trim());
 
@@ -100,14 +98,14 @@ public class Registration extends AppCompatActivity {
                     startActivity(new Intent(Registration.this, Search.class));
 
                 }
-                if(a == 0) {
+
                     Snackbar snackbar = Snackbar
                             .make(regi, "Passwords do not match", Snackbar.LENGTH_LONG);
                     snackbar.show();
 
                 }
 
-            }
+
 
 
 
