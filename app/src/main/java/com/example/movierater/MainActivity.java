@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     User user;
 
     //Comment for update to see what pull does
+    //Make sure username is email
+    //Complexity of Password?
+    //User Login information?
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
