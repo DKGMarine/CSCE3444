@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     User user;
 
     //Comment for update to see what pull does
+    //Commit again!
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
