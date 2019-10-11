@@ -30,7 +30,14 @@ public class MainActivity extends AppCompatActivity {
     User user;
 
     //Comment for update to see what pull does
+<<<<<<< HEAD
     //Bassam Commit only for Branch
+=======
+    //Make sure username is email
+    //Complexity of Password?
+    //User Login information?
+    //
+>>>>>>> master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
