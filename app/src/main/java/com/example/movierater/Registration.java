@@ -36,10 +36,14 @@ public class Registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_register);
+
+        //Variable init
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         password_verify = (EditText) findViewById(R.id.password_verify);
         sign_up = (android.widget.Button) findViewById(R.id.sign_up);
+
+        //Init Firebase
         FirebaseApp.initializeApp(Registration.this);
         regi = findViewById(R.id.regi);
         user = new User();
