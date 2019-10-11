@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     String email_s;
     RelativeLayout main;
     User user;
+
+    //Comment for update to see what pull does
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
