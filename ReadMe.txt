@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-Test
-=======
-Karla
->>>>>>> master
