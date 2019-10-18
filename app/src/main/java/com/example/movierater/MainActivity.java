@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     String email_s;
     RelativeLayout main;
     User user;
-
+    //comment for josh, testing github
     //Comment for update to see what pull does
     //Make sure username is email
     //Complexity of Password?
