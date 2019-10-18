@@ -4,30 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_test"
-    android:paddingRight="45dp"
-    android:paddingLeft="45dp"
+
+    android:layout_alignParentEnd="false"
+    android:layout_alignParentBottom="false"
     tools:context=".Results">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="163dp"
+        android:layout_height="278dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="0"
+        app:srcCompat="@drawable/streamguide" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/streamguide" />
+    <Button
+        android:id="@+id/return_search"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/homeAsUpIndicator"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <LinearLayout
+        android:layout_width="248dp"
+        android:layout_height="600dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="163dp"
+        android:gravity="right|center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <EditText
             android:id="@+id/title"
             style="@style/editText_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="26dp"
 
             android:ems="10"
             android:hint="Title"
@@ -38,11 +61,12 @@
             app:layout_constraintTop_toTopOf="parent"
 
             />
+
         <EditText
             android:id="@+id/duration"
             style="@style/editText_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="17dp"
 
             android:ems="10"
             android:hint="Duration"
@@ -53,6 +77,7 @@
             app:layout_constraintTop_toTopOf="parent"
 
             />
+
         <EditText
             android:id="@+id/release"
             style="@style/editText_style"
@@ -86,13 +111,13 @@
             />
 
         <EditText
-            style="@style/editText_style"
             android:id="@+id/hulu"
+            style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Hulu"
+            android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,6 +140,7 @@
             app:layout_constraintTop_toTopOf="parent"
 
             />
+
         <EditText
             android:id="@+id/sling"
             style="@style/editText_style"
@@ -130,6 +156,7 @@
             app:layout_constraintTop_toTopOf="parent"
 
             />
+
         <EditText
             android:id="@+id/hbo"
             style="@style/editText_style"
@@ -161,6 +188,7 @@
             app:layout_constraintTop_toTopOf="parent"
 
             />
+
         <EditText
             android:id="@+id/google"
             style="@style/editText_style"
@@ -176,19 +204,6 @@
             app:layout_constraintTop_toTopOf="parent"
 
             />
-
-        <Button
-            style="@style/button_style"
-            android:id="@+id/return_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Return"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login"
-            app:layout_constraintVertical_bias="0.154" />
-
 
 
     </LinearLayout>
