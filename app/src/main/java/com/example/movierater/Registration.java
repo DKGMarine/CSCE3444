@@ -32,6 +32,8 @@ public class Registration extends AppCompatActivity {
     RelativeLayout regi;
     String p1 , p2;
 
+    // added comment
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
