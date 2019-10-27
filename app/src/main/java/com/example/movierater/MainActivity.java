@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     //User Login information?
     //
     // hello world
-    // Weston's test comment
+    // Weston's test comment v2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
