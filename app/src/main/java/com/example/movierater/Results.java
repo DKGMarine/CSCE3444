@@ -15,7 +15,7 @@ import com.example.movierater.Movie;
 public class Results extends AppCompatActivity{
 
     android.widget.Button return_search;
-    EditText title,duration, release, netflix, hulu, prime, sling, hbo, youtube, google;
+    EditText title,director, duration, rating, release, netflix, hulu, prime, hbo, youtube, google;
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -25,11 +25,12 @@ public class Results extends AppCompatActivity{
 
         title = (EditText) findViewById(R.id.title);
         duration = (EditText) findViewById(R.id.duration);
+        director = (EditText) findViewById(R.id.director);
         release = (EditText) findViewById(R.id.release);
+        rating = (EditText) findViewById(R.id.rating);
         netflix = (EditText) findViewById(R.id.netflix);
         hulu = (EditText) findViewById(R.id.hulu);
         prime = (EditText) findViewById(R.id.prime);
-        sling = (EditText) findViewById(R.id.sling);
         hbo = (EditText) findViewById(R.id.hbo);
         youtube = (EditText) findViewById(R.id.youtube);
         google = (EditText) findViewById(R.id.google);
@@ -38,11 +39,12 @@ public class Results extends AppCompatActivity{
 
         title.setText("Title - " + m.title);
         duration.setText("Length - " + Integer.toString(m.duration) + "m");
+        director.setText("Director - " + m.director);
         release.setText("Release Year - " + Integer.toString(m.release_year));
+        rating.setText("User's average rating - " + Float.toString(m.rating));
         netflix.setText("Netflix - " + Boolean.toString(m.netflix));
         hulu.setText("Hulu - " + Boolean.toString(m.hulu));
         prime.setText("Prime Video- " + Boolean.toString(m.prime_video));
-        sling.setText("Sling TV- " + Boolean.toString(m.sling_tv));
         hbo.setText("HBO Now - " + Boolean.toString(m.hbo_now));
         youtube.setText("Youtube TV - " + Boolean.toString(m.youtube_tv));
         google.setText("Google Play - " + Boolean.toString(m.google_play));

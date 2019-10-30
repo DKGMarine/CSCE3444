@@ -42,15 +42,13 @@ public class Search extends AppCompatActivity{
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("Movie");
         search_id = findViewById(R.id.search_id);
+        m = new Movie();
 
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 title = movie.getText().toString().trim();
-
-
-
 
                Query query =  myRef.orderByChild("title").equalTo(title);
                query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -68,11 +66,6 @@ public class Search extends AppCompatActivity{
 
                                 }
 
-
-
-
-
-
                             }
                     }
 
@@ -88,21 +81,21 @@ public class Search extends AppCompatActivity{
                         .make(search_id, "Movie not found", Snackbar.LENGTH_LONG);
                 snackbar.show();
 
-               //Log.d("debug2", m.title);
 
-                /*
                 m.title = "Interstellar";
                 m.duration = 169;
                 m.release_year = 2014;
+                m.movie_id = 1;
+                m.director = "Christopher Nolan";
+                m.rating = 0;
                 m.google_play = true;
                 m.hbo_now = false;
                 m.netflix = false;
                 m.youtube_tv = true;
-                m.sling_tv = false;
                 m.prime_video = true;
                 m.hulu = false;
                 myRef.push().setValue(m);
-                */
+
 
 
 

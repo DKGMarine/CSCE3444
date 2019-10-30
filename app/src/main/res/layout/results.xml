@@ -63,6 +63,21 @@
             />
 
         <EditText
+            android:id="@+id/director"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:ems="10"
+            android:hint="Director"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <EditText
             android:id="@+id/duration"
             style="@style/editText_style"
             android:layout_width="match_parent"
@@ -86,6 +101,22 @@
 
             android:ems="10"
             android:hint="Release Year"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <EditText
+            android:id="@+id/rating"
+            style="@style/editText_style"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+
+            android:ems="10"
+            android:hint="Rating"
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -133,22 +164,6 @@
 
             android:ems="10"
             android:hint="Prime Video"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            />
-
-        <EditText
-            android:id="@+id/sling"
-            style="@style/editText_style"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:ems="10"
-            android:hint="Sling TV"
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
