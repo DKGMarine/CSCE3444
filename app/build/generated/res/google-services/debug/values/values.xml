@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">352879217551-fjrelu8fht65mdeg1vs5re8heugutln1.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://movierater-e19d2.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">352879217551</string>
+    <string name="google_api_key" translatable="false">AIzaSyDCuWXwuqyYYjD-22atqpA0QGegNGi8V3I</string>
+    <string name="google_app_id" translatable="false">1:352879217551:android:2d17720a03edf47a8f59fa</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDCuWXwuqyYYjD-22atqpA0QGegNGi8V3I</string>
+    <string name="google_storage_bucket" translatable="false">movierater-e19d2.appspot.com</string>
+    <string name="project_id" translatable="false">movierater-e19d2</string>
+</resources>

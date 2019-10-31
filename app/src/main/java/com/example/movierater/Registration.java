@@ -31,6 +31,9 @@ public class Registration extends AppCompatActivity {
     String email2;
     RelativeLayout regi;
     String p1 , p2;
+    long maxid=0;
+    int logic = 0;
+    int wait = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -49,6 +52,23 @@ public class Registration extends AppCompatActivity {
         user = new User();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("User");
+
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.exists())
+                    maxid=(dataSnapshot.getChildrenCount());
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         sign_up.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -58,28 +78,43 @@ public class Registration extends AppCompatActivity {
                 p1 = password.getText().toString().trim();
                 p2 = password_verify.getText().toString().trim();
 
-                if(p1.equals(p2)){
-
                     Query query = myRef.orderByChild("email").equalTo(email2);
-                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    query.addListenerForSingleValueEvent(new ValueEventListener(){
 
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            logic = 0;
 
-                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                if (dataSnapshot.exists()) {
-                                    Snackbar snackbar = Snackbar
-                                            .make(regi, "Email already in use", Snackbar.LENGTH_LONG);
-                                    snackbar.show();
-                                    startActivity(new Intent(Registration.this, Registration.class));
+                                for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
+
+                                    if(dataSnapshot.exists()){
+                                        logic = 1;
+                                        Snackbar snackbar = Snackbar
+                                                .make(regi, "Email already in use", Snackbar.LENGTH_LONG);
+                                        snackbar.show();
+
+
+                                    }
 
                                 }
 
+                            if(p1.equals(p2) && logic == 0) {
+                                user.setEmail(email2);
+                                user.setPassword(p1);
+                                user.setUser_id((int)maxid);
+                                myRef.child(String.valueOf(maxid+1)).setValue(user);
+                                startActivity(new Intent(Registration.this, Search.class));
 
                             }
+
+                            if(logic == 0 ) {
+                                Snackbar snackbar = Snackbar
+                                        .make(regi, "Passwords do not match", Snackbar.LENGTH_LONG);
+                                snackbar.show();
+
+                            }
+
                         }
-
-
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -90,22 +125,6 @@ public class Registration extends AppCompatActivity {
 
 
 
-                }
-
-
-
-                if(p1.equals(p2)) {
-                    user.setEmail(email.getText().toString().trim());
-                    user.setPassword(password.getText().toString().trim());
-
-                    myRef.push().setValue(user);
-                    startActivity(new Intent(Registration.this, Search.class));
-
-                }
-
-                    Snackbar snackbar = Snackbar
-                            .make(regi, "Passwords do not match", Snackbar.LENGTH_LONG);
-                    snackbar.show();
 
                 }
 

@@ -3,6 +3,7 @@ package  com.example.movierater;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -21,6 +22,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.Arrays;
 
 
 public class Search extends AppCompatActivity{
@@ -42,6 +45,7 @@ public class Search extends AppCompatActivity{
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("Movie");
         search_id = findViewById(R.id.search_id);
+        m = new Movie();
 
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,10 +53,11 @@ public class Search extends AppCompatActivity{
 
                 title = movie.getText().toString().trim();
 
-
-
-
                Query query =  myRef.orderByChild("title").equalTo(title);
+                Levenshtein_Searc fun = new Levenshtein_Searc();
+                int tempNumber = fun.calculate("abdc", "abcdef");
+                String tempo = String.valueOf(tempNumber);
+                Log.d("Bassam", tempo);
                query.addListenerForSingleValueEvent(new ValueEventListener() {
 
                     @Override
@@ -67,11 +72,6 @@ public class Search extends AppCompatActivity{
                                     startActivity(intent);
 
                                 }
-
-
-
-
-
 
                             }
                     }
@@ -88,21 +88,21 @@ public class Search extends AppCompatActivity{
                         .make(search_id, "Movie not found", Snackbar.LENGTH_LONG);
                 snackbar.show();
 
-               //Log.d("debug2", m.title);
 
-                /*
                 m.title = "Interstellar";
                 m.duration = 169;
                 m.release_year = 2014;
+                m.movie_id = 1;
+                m.director = "Christopher Nolan";
+                m.rating = 0;
                 m.google_play = true;
                 m.hbo_now = false;
                 m.netflix = false;
                 m.youtube_tv = true;
-                m.sling_tv = false;
                 m.prime_video = true;
                 m.hulu = false;
                 myRef.push().setValue(m);
-                */
+
 
 
 
@@ -112,3 +112,33 @@ public class Search extends AppCompatActivity{
 
 }
 }
+
+class Levenshtein_Searc {
+    static int calculate(String x, String y) {
+        if (x.isEmpty()) {
+            return y.length();
+        }
+
+        if (y.isEmpty()) {
+            return x.length();
+        }
+
+        int substitution = calculate(x.substring(1), y.substring(1))
+                + costOfSubstitution(x.charAt(0), y.charAt(0));
+        int insertion = calculate(x, y.substring(1)) + 1;
+        int deletion = calculate(x.substring(1), y) + 1;
+
+        return min(substitution, insertion, deletion);
+    }
+
+    public static int costOfSubstitution(char a, char b) {
+        return a == b ? 0 : 1;
+    }
+
+    //Only Targets API and Above. Not sure how it work on lower ones.
+    @TargetApi(24)
+    public static int min(int... numbers) {
+        return Arrays.stream(numbers).min().orElse(Integer.MAX_VALUE);
+    }
+}
+

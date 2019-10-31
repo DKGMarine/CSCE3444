@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     String email_s;
     RelativeLayout main;
     User user;
-
+    //comment for josh, testing github
     //Comment for update to see what pull does
 <<<<<<< HEAD
     //Bassam Commit only for Branch
@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     //Complexity of Password?
     //User Login information?
     //
+<<<<<<< HEAD
+>>>>>>> master
+=======
+    // hello world
+    // Weston's test comment v2
 >>>>>>> master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
