@@ -12,43 +12,39 @@
     >
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_weight="0"
-            app:srcCompat="@drawable/moviebuddy"/>
+            app:srcCompat="@drawable/moviebuddy" />
+
         <EditText
-            style="@style/editText_style"
             android:id="@+id/movie"
+            style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Your movie/show"
+            android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            style="@style/button_style"
             android:id="@+id/search_btn"
+            style="@style/button_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Search"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-             />
-
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </LinearLayout>
