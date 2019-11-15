@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bassammetwally/Android/CSCE3444/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/4b85e657826d1454f512a97b2bd18921/appcompat-1.0.0/res/values-v26/values-v26.xml",
+                    "source": "/Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/4b85e657826d1454f512a97b2bd18921/appcompat-1.0.0/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

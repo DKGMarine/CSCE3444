@@ -6,120 +6,135 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml
+8-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml
+9-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml
 10
 11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:25:5-79
-13-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:25:22-76
+13-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:25:5-79
+13-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:25:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:26:5-67
-14-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:26:22-64
+14-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:26:5-67
+14-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:26:22-64
 15
 16    <application
-16-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:7:5-41:19
+16-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:7:5-41:19
 17        android:allowBackup="true"
-17-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:8:9-35
+17-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:8:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/1bd162d1e9982c51999cbe410f0d807a/core-1.0.0/AndroidManifest.xml:22:18-86
+18-->[androidx.core:core:1.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/1bd162d1e9982c51999cbe410f0d807a/core-1.0.0/AndroidManifest.xml:22:18-86
 19        android:debuggable="true"
 20        android:fullBackupContent="true"
-20-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:9:9-41
+20-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:9:9-41
 21        android:icon="@mipmap/ic_launcher"
-21-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:10:9-43
+21-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:10:9-43
 22        android:label="@string/app_name"
-22-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:11:9-41
+22-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:11:9-41
 23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:12:9-54
+23-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:12:9-54
 24        android:supportsRtl="true"
-24-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:13:9-35
+24-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:13:9-35
 25        android:testOnly="true"
 26        android:theme="@style/AppTheme" >
-26-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:14:9-40
+26-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:14:9-40
 27        <activity
-27-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:15:9-22:20
+27-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:15:9-22:20
 28            android:name="com.example.movierater.MainActivity"
-28-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:15:19-47
+28-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:15:19-47
 29            android:screenOrientation="portrait" >
-29-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:16:13-49
+29-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:16:13-49
 30            <intent-filter>
-30-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:17:13-21:29
+30-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:17:13-21:29
 31                <action android:name="android.intent.action.MAIN" />
-31-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:18:17-69
-31-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:18:25-66
+31-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:18:17-69
+31-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:18:25-66
 32
 33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:20:17-77
-33-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:20:27-74
+33-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:20:17-77
+33-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:20:27-74
 34            </intent-filter>
 35        </activity>
 36        <activity
-36-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:24:9-27:20
+36-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:24:9-27:20
 37            android:name="com.example.movierater.Registration"
-37-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:24:19-69
+37-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:24:19-69
 38            android:screenOrientation="portrait" >
-38-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:25:13-49
+38-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:25:13-49
 39        </activity>
 40        <activity
-40-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:29:9-32:20
+40-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:29:9-32:20
 41            android:name="com.example.movierater.Search"
-41-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:29:19-63
+41-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:29:19-63
 42            android:screenOrientation="portrait" >
-42-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:30:13-49
+42-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:30:13-49
 43        </activity>
 44        <activity
-44-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:34:9-37:20
+44-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:34:9-37:20
 45            android:name="com.example.movierater.Results"
-45-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:34:19-64
+45-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:34:19-64
 46            android:screenOrientation="portrait" >
-46-->/Users/bassammetwally/Android/CSCE3444/app/src/main/AndroidManifest.xml:35:13-49
+46-->/Users/karlarodriguez/Documents/Android Project/CSCE3444/app/src/main/AndroidManifest.xml:35:13-49
 47        </activity>
 48
 49        <service
-49-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:29:9-35:19
+49-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:29:9-35:19
 50            android:name="com.google.firebase.components.ComponentDiscoveryService"
-50-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:30:13-84
+50-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:30:13-84
 51            android:directBootAware="true"
-51-->[com.google.firebase:firebase-common:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:14:13-43
+51-->[com.google.firebase:firebase-common:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:14:13-43
 52            android:exported="false" >
-52-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:31:13-37
+52-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:31:13-37
 53            <meta-data
-53-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:32:13-34:85
+53-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:32:13-34:85
 54                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-54-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:33:17-109
+54-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:33:17-109
 55                android:value="com.google.firebase.components.ComponentRegistrar" />
-55-->[com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:34:17-82
-56        </service>
-57
-58        <activity
-58-->[com.google.android.gms:play-services-base:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-59            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-59-->[com.google.android.gms:play-services-base:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-60            android:exported="false"
-60-->[com.google.android.gms:play-services-base:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-61            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-61-->[com.google.android.gms:play-services-base:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-62
-63        <provider
-63-->[com.google.firebase:firebase-common:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:17:9-21:39
-64            android:name="com.google.firebase.provider.FirebaseInitProvider"
-64-->[com.google.firebase:firebase-common:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:18:13-77
-65            android:authorities="com.example.movierater.firebaseinitprovider"
-65-->[com.google.firebase:firebase-common:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:19:13-72
-66            android:exported="false"
-66-->[com.google.firebase:firebase-common:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:20:13-37
-67            android:initOrder="100" />
-67-->[com.google.firebase:firebase-common:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:21:13-36
-68
-69        <meta-data
-69-->[com.google.android.gms:play-services-basement:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/2179ff30d945bcdec0c9a644108ab0bd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-70            android:name="com.google.android.gms.version"
-70-->[com.google.android.gms:play-services-basement:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/2179ff30d945bcdec0c9a644108ab0bd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-71            android:value="@integer/google_play_services_version" />
-71-->[com.google.android.gms:play-services-basement:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/2179ff30d945bcdec0c9a644108ab0bd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-72    </application>
-73
-74</manifest>
+55-->[com.google.firebase:firebase-database:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:34:17-82
+56            <meta-data
+56-->[com.google.firebase:firebase-storage:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/bcdf615694a8182e986fae1018adaadc/firebase-storage-19.1.0/AndroidManifest.xml:33:13-35:85
+57                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+57-->[com.google.firebase:firebase-storage:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/bcdf615694a8182e986fae1018adaadc/firebase-storage-19.1.0/AndroidManifest.xml:34:17-107
+58                android:value="com.google.firebase.components.ComponentRegistrar" />
+58-->[com.google.firebase:firebase-storage:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/bcdf615694a8182e986fae1018adaadc/firebase-storage-19.1.0/AndroidManifest.xml:35:17-82
+59        </service>
+60
+61        <provider
+61-->[com.squareup.picasso:picasso:2.71828] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/7d3747df560673b3984d5ff6cf698e9e/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+62            android:name="com.squareup.picasso.PicassoProvider"
+62-->[com.squareup.picasso:picasso:2.71828] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/7d3747df560673b3984d5ff6cf698e9e/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+63            android:authorities="com.example.movierater.com.squareup.picasso"
+63-->[com.squareup.picasso:picasso:2.71828] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/7d3747df560673b3984d5ff6cf698e9e/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+64            android:exported="false" />
+64-->[com.squareup.picasso:picasso:2.71828] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/7d3747df560673b3984d5ff6cf698e9e/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+65
+66        <activity
+66-->[com.google.android.gms:play-services-base:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+67            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+67-->[com.google.android.gms:play-services-base:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+68            android:exported="false"
+68-->[com.google.android.gms:play-services-base:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+69            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+69-->[com.google.android.gms:play-services-base:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+70
+71        <provider
+71-->[com.google.firebase:firebase-common:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:17:9-21:39
+72            android:name="com.google.firebase.provider.FirebaseInitProvider"
+72-->[com.google.firebase:firebase-common:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:18:13-77
+73            android:authorities="com.example.movierater.firebaseinitprovider"
+73-->[com.google.firebase:firebase-common:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:19:13-72
+74            android:exported="false"
+74-->[com.google.firebase:firebase-common:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:20:13-37
+75            android:initOrder="100" />
+75-->[com.google.firebase:firebase-common:19.1.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/51982bb1efd8b2a3c594646c0d02688c/firebase-common-19.1.0/AndroidManifest.xml:21:13-36
+76
+77        <meta-data
+77-->[com.google.android.gms:play-services-basement:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/b6835d9b0b57880b5548e2c9eadd7413/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+78            android:name="com.google.android.gms.version"
+78-->[com.google.android.gms:play-services-basement:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/b6835d9b0b57880b5548e2c9eadd7413/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+79            android:value="@integer/google_play_services_version" />
+79-->[com.google.android.gms:play-services-basement:17.0.0] /Users/karlarodriguez/.gradle/caches/transforms-2/files-2.1/b6835d9b0b57880b5548e2c9eadd7413/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+80    </application>
+81
+82</manifest>
