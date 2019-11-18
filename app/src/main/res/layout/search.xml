@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="100dp"
             android:layout_weight="0"
             app:srcCompat="@drawable/moviebuddy" />
 
@@ -42,6 +42,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/favorites_btn"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorites List"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

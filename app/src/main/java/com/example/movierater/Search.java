@@ -28,6 +28,7 @@ import java.util.Arrays;
 
 public class Search extends AppCompatActivity{
     android.widget.Button search_btn;
+    android.widget.Button favorites_btn;
     EditText movie;
     String title;
     DatabaseReference myRef;
@@ -41,11 +42,20 @@ public class Search extends AppCompatActivity{
         setContentView(R.layout.search);
         movie = (EditText) findViewById(R.id.movie);
         search_btn = (android.widget.Button) findViewById(R.id.search_btn);
+        favorites_btn = findViewById(R.id.favorites_btn);
         FirebaseApp.initializeApp(Search.this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("Movie");
         search_id = findViewById(R.id.search_id);
         m = new Movie();
+
+        favorites_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(Search.this, favorites.class));
+            }
+
+        });
 
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,7 +118,9 @@ public class Search extends AppCompatActivity{
 
             }
 
-        });
+        });//search btn OnClickListener
+
+
 
 }
 }
