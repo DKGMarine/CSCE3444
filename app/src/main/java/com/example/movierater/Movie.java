@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Movie implements Serializable {
 
-
+     public String image;
      public String title;
      public String director;
      public float rating; // local rating to our app
@@ -17,5 +17,7 @@ public class Movie implements Serializable {
      public boolean hbo_now;
      public boolean youtube_tv;
      public boolean google_play;
+
+
 
 }

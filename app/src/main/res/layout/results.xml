@@ -10,23 +10,22 @@
     tools:context=".Results">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="163dp"
-        android:layout_height="278dp"
+        android:id="@+id/imag"
+        android:layout_width="169dp"
+        android:layout_height="255dp"
         android:layout_alignParentLeft="false"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="false"
         android:layout_alignParentBottom="false"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="39dp"
         android:layout_marginBottom="0dp"
-        android:layout_weight="0"
-        app:srcCompat="@drawable/streamguide" />
+        android:layout_weight="0" />
 
     <Button
         android:id="@+id/return_search"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="58dp"
-        android:layout_height="wrap_content"
+        android:layout_width="31dp"
+        android:layout_height="37dp"
         android:foreground="?attr/homeAsUpIndicator"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +44,7 @@
         android:gravity="right|center_vertical"
         android:orientation="vertical"
         android:visibility="visible">
+
 
         <EditText
             android:id="@+id/title"

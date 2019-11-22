@@ -1,53 +1,62 @@
 package  com.example.movierater;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
-import com.example.movierater.Movie;
+import com.bumptech.glide.Glide;
 
 public class Results extends AppCompatActivity{
-
+    // imageView = findViewById(R.id.imageView);
+    ImageView imageType;
     android.widget.Button return_search;
+
+    String url;
+
     EditText title,director, duration, rating, release, netflix, hulu, prime, hbo, youtube, google;
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results);
+        imageType=findViewById(R.id.imag);
         Movie m = (Movie) getIntent().getSerializableExtra("Movie");
+        url = m.image;
+        //url = "https://firebasestorage.googleapis.com/v0/b/movierater-e19d2.appspot.com/o/Interstellar.jpg?alt=media&token=f88715f2-abb3-4f26-9171-bf0c5c4db050";
+        Glide.with(getApplicationContext()).load(url).into(imageType);
 
+        //image = findViewById(R.id.image);
+        title = findViewById(R.id.title);
+        duration = findViewById(R.id.duration);
+        director = findViewById(R.id.director);
+        release = findViewById(R.id.release);
+        rating = findViewById(R.id.rating);
+        netflix = findViewById(R.id.netflix);
+        hulu = findViewById(R.id.hulu);
+        prime = findViewById(R.id.prime);
+        hbo = findViewById(R.id.hbo);
+        youtube = findViewById(R.id.youtube);
+        google = findViewById(R.id.google);
+        return_search = findViewById(R.id.return_search);
 
-        title = (EditText) findViewById(R.id.title);
-        duration = (EditText) findViewById(R.id.duration);
-        director = (EditText) findViewById(R.id.director);
-        release = (EditText) findViewById(R.id.release);
-        rating = (EditText) findViewById(R.id.rating);
-        netflix = (EditText) findViewById(R.id.netflix);
-        hulu = (EditText) findViewById(R.id.hulu);
-        prime = (EditText) findViewById(R.id.prime);
-        hbo = (EditText) findViewById(R.id.hbo);
-        youtube = (EditText) findViewById(R.id.youtube);
-        google = (EditText) findViewById(R.id.google);
-        return_search = (android.widget.Button) findViewById(R.id.return_search);
-
-
+        //image.setText(m.image);
         title.setText("Title - " + m.title);
-        duration.setText("Length - " + Integer.toString(m.duration) + "m");
+        duration.setText("Length - " + m.duration + "m");
         director.setText("Director - " + m.director);
-        release.setText("Release Year - " + Integer.toString(m.release_year));
-        rating.setText("User's average rating - " + Float.toString(m.rating));
-        netflix.setText("Netflix - " + Boolean.toString(m.netflix));
-        hulu.setText("Hulu - " + Boolean.toString(m.hulu));
-        prime.setText("Prime Video- " + Boolean.toString(m.prime_video));
-        hbo.setText("HBO Now - " + Boolean.toString(m.hbo_now));
-        youtube.setText("Youtube TV - " + Boolean.toString(m.youtube_tv));
-        google.setText("Google Play - " + Boolean.toString(m.google_play));
+        release.setText("Release Year - " + m.release_year);
+        rating.setText("User's average rating - " + m.rating);
+        netflix.setText("Netflix - " + m.netflix);
+        hulu.setText("Hulu - " + m.hulu);
+        prime.setText("Prime Video- " + m.prime_video);
+        hbo.setText("HBO Now - " + m.hbo_now);
+        youtube.setText("Youtube TV - " + m.youtube_tv);
+        google.setText("Google Play - " + m.google_play);
+
+
+
 
 
         return_search.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +69,7 @@ public class Results extends AppCompatActivity{
 
             }
         });
+
 
 
     }

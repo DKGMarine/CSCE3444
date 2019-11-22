@@ -6,14 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
-import com.example.movierater.Movie;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -98,7 +95,7 @@ public class Search extends AppCompatActivity{
                         .make(search_id, "Movie not found", Snackbar.LENGTH_LONG);
                 snackbar.show();
 
-
+                m.image = ("https://firebasestorage.googleapis.com/v0/b/movierater-e19d2.appspot.com/o/Interstellar.jpg?alt=media&token=f88715f2-abb3-4f26-9171-bf0c5c4db050");
                 m.title = "Interstellar";
                 m.duration = 169;
                 m.release_year = 2014;
