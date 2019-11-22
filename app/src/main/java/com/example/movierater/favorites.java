@@ -30,19 +30,22 @@ public class favorites extends AppCompatActivity {
 
         }
 
-        RecyclerView favoritesList = (RecyclerView)findViewById(R.id.fav_list);
+        RecyclerView favoritesList;
+        favoritesList = (RecyclerView)findViewById(R.id.fav_list);
 
         //will improve performance, not necessary
         //might not work
         favoritesList.setHasFixedSize(true);
 
+        //use a linear layout manager
+        RecyclerView.LayoutManager favManager = new LinearLayoutManager(this);
+        favoritesList.setLayoutManager( favManager);
+
         //specify an adapter
         RecyclerView.Adapter favAdapter = new FavoritesAdapter(this, favMovies);
         favoritesList.setAdapter(favAdapter);
 
-        //use a linear layout manager
-        //RecyclerView.LayoutManager favManager = new LinearLayoutManager(this);
-        favoritesList.setLayoutManager( new LinearLayoutManager(this));
+
 
     }
 
