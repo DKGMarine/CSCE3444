@@ -4,33 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_test"
     android:paddingRight="45dp"
     android:paddingLeft="45dp"
     android:id="@+id/regi"
     tools:context=".Registration"
+    android:background="#FFFFFF"
     >
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/moviebuddy" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:scaleType="centerCrop"
+        app:lottie_rawRes="@raw/octopus"
+        app:lottie_loop="false"
+        app:lottie_autoPlay="true" />
 
         <EditText
             android:id="@+id/email"
             style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_below="@+id/animation_view"
             android:ems="10"
             android:hint="Email"
             android:inputType="textPersonName"
@@ -46,7 +42,7 @@
             style="@style/editText_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_below="@+id/email"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
@@ -63,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_below="@+id/password"
             android:inputType="textPassword"
             android:hint="Re-enter Password"
             android:textAlignment="center"
@@ -74,6 +71,7 @@
 
         <Button
             style="@style/button_style"
+            android:layout_below="@+id/password_verify"
             android:id="@+id/sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,9 +81,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login"
             app:layout_constraintVertical_bias="0.154" />
-
-
-
-    </LinearLayout>
 
 </RelativeLayout>

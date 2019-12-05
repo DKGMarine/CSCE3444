@@ -18,6 +18,7 @@ import com.google.firebase.database.*;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.util.Log;
+import com.beardedhen.androidbootstrap.TypefaceProvider;
 
 public class MainActivity extends AppCompatActivity {
     EditText email, password;
@@ -40,7 +41,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.activity_main);
+        TypefaceProvider.registerDefaultIconSets();
         email = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.password);
         login = (android.widget.Button)findViewById(R.id.login);

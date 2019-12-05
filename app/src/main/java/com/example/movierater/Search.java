@@ -36,6 +36,11 @@ public class Search extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.search);
         movie = (EditText) findViewById(R.id.movie);
         search_btn = (android.widget.Button) findViewById(R.id.search_btn);
