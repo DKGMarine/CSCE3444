@@ -1,10 +1,12 @@
 package com.example.movierater;
 
+import java.util.ArrayList;
+
 public class User {
     private String email;
     private String password;
     private int user_id;
-    public int[] favorites_list;
+    public ArrayList<Integer> favorites_list;
 
     public User() {
     }

@@ -1,6 +1,8 @@
 package com.example.movierater;
 
 import android.content.Context;
+import android.content.Intent;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +13,13 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.MyViewHolder> {
-    private String[] myDataset;
 
-    private ArrayList<String> m_fav_movie_titles = new ArrayList<>();
-    //also need to store info for images
+    private ArrayList<Movie> m_fav_movies = new ArrayList<>();
 
     private Context mContext;
 
@@ -35,10 +37,10 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.MyVi
 
     }//class MyViewHolder
 
-    public FavoritesAdapter(Context context, ArrayList<String> fav_movie_titles) {
+    public FavoritesAdapter(Context context, ArrayList<Movie> fav_movies) {
 
         mContext = context;
-        m_fav_movie_titles = fav_movie_titles;
+        m_fav_movies = fav_movies;
 
     }//MyAdapter constructor
 
@@ -53,13 +55,18 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.MyVi
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
-        holder.favMovieTitle.setText(m_fav_movie_titles.get(position));
-        //holder.favMovieImage.somehow get an image into here
+        holder.favMovieTitle.setText(m_fav_movies.get(position).title);
+        Glide.with(mContext.getApplicationContext()).load(m_fav_movies.get(position).image).into(holder.favMovieImage);
 
         holder.favListItem.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(mContext, m_fav_movie_titles.get(position), Toast.LENGTH_SHORT).show();
+            public void onClick(View view) { //move to the movie's page
+                Toast.makeText(mContext, m_fav_movies.get(position).title, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext, Results.class);
+                intent.putExtra("Movie", m_fav_movies.get(position));
+                mContext.startActivity(intent);
+                //*/
             }
         });
 
@@ -68,7 +75,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.MyVi
     @Override
     public int getItemCount() {
 
-        return m_fav_movie_titles.size();
+        return m_fav_movies.size();
 
     }//getItemCount
 

@@ -55,6 +55,7 @@ public class Search extends AppCompatActivity{
             @Override
             public void onClick(View view){
                 startActivity(new Intent(Search.this, favorites.class));
+                //this needs to send either an arraylist of movie id's, or the user id
             }
 
         });
