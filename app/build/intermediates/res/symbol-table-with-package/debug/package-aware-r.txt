@@ -2948,6 +2948,7 @@ id movie
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id my_recycler_view
 id navigation_header_container
 id netflix
 id never
@@ -2976,6 +2977,8 @@ id regi
 id regular
 id release
 id restart
+id results_id
+id resultsalt_id
 id return_search
 id reverse
 id right
@@ -3490,6 +3493,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout results
+layout resultsalt
 layout search
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

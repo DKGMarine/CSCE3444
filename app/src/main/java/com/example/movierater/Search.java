@@ -1,5 +1,4 @@
 package  com.example.movierater;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,17 +19,29 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
+import java.lang.String;
+
 import java.util.Arrays;
+import java.util.HashMap;
 
 
 public class Search extends AppCompatActivity{
+
+    HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+
+
     android.widget.Button search_btn;
     android.widget.Button favorites_btn;
     EditText movie;
     String title;
+    Integer ID;
+    int logic = 0;
+    int counter = 0;
     DatabaseReference myRef;
     Movie m;
     RelativeLayout search_id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -48,9 +59,10 @@ public class Search extends AppCompatActivity{
         FirebaseApp.initializeApp(Search.this);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("Movie");
-        search_id = findViewById(R.id.search_id);
-        m = new Movie();
 
+        m = new Movie();
+        final Levenshtein_Searc fun = new Levenshtein_Searc();
+        final Query query =  myRef.orderByChild("title");
         favorites_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -65,27 +77,45 @@ public class Search extends AppCompatActivity{
 
                 title = movie.getText().toString().trim();
 
-               Query query =  myRef.orderByChild("title").equalTo(title);
-                Levenshtein_Searc fun = new Levenshtein_Searc();
-                int tempNumber = fun.calculate("abdc", "abcdef");
-                String tempo = String.valueOf(tempNumber);
-                Log.d("Bassam", tempo);
+               //.equalTo(title);
+               // int tempNumber = fun.calculate("abdc", "abcdef");
+                //String tempo = String.valueOf(tempNumber);
+             //   Log.d("Bassam", tempo);
                query.addListenerForSingleValueEvent(new ValueEventListener() {
 
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                             for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
-                                if(dataSnapshot.exists()) {
-                                    m = snapshot.getValue(Movie.class); // grabbing value from database and storing into m object
+
+                                m = snapshot.getValue(Movie.class); // grabbing value from database and storing into m object
+                                // do something, such as display a XML saying "not foun
+                                int tempNumber = fun.hammingDist(m.title, title);
+                                ID = m.movie_id;
+                                hmap.put(tempNumber, ID);
+                                //String temp = tempNumber.toString();
+                                counter++;
+                                //Log.d("ex", m.title + " and " + title + " = " + Integer.toString(tempNumber));
+                                if(tempNumber == 0) {
+                                    logic = 1;
+                                    //if(dataSnapshot.exists()) {
+                                   // m = snapshot.getValue(Movie.class); // grabbing value from database and storing into m object
                                     // do something, such as display a XML saying "not foun
                                     Intent intent = new Intent(Search.this, Results.class);
                                     intent.putExtra("Movie", m);
                                     startActivity(intent);
-
+                                    //  }
                                 }
 
+
                             }
+
+                            if(logic == 0) {
+                                Intent intent2 = new Intent(Search.this, ResultsAlt.class);
+                                intent2.putExtra("Hash", hmap);
+                                startActivity(intent2);
+                            }
+
                     }
 
 
@@ -96,10 +126,9 @@ public class Search extends AppCompatActivity{
                     }
                 });
 
-                Snackbar snackbar = Snackbar
-                        .make(search_id, "Movie not found", Snackbar.LENGTH_LONG);
-                snackbar.show();
 
+
+                /*
                 m.image = ("https://firebasestorage.googleapis.com/v0/b/movierater-e19d2.appspot.com/o/Interstellar.jpg?alt=media&token=f88715f2-abb3-4f26-9171-bf0c5c4db050");
                 m.title = "Interstellar";
                 m.duration = 169;
@@ -115,7 +144,7 @@ public class Search extends AppCompatActivity{
                 m.hulu = false;
                 myRef.push().setValue(m);
 
-
+                */
 
 
             }
@@ -127,8 +156,10 @@ public class Search extends AppCompatActivity{
 }
 }
 
+
+
 class Levenshtein_Searc {
-    static int calculate(String x, String y) {
+    public int calculate(String x, String y) {
         if (x.isEmpty()) {
             return y.length();
         }
@@ -143,6 +174,20 @@ class Levenshtein_Searc {
         int deletion = calculate(x.substring(1), y) + 1;
 
         return min(substitution, insertion, deletion);
+    }
+
+    static int hammingDist(String str1, String str2)
+    {
+        int i = 0, count = 0;
+        str2 = str2.toLowerCase();
+        str1 = str1.toLowerCase();
+        while (i < str1.length() && str2.length() > i)
+        {
+            if (str1.charAt(i) != str2.charAt(i))
+                count++;
+            i++;
+        }
+        return count;
     }
 
     public static int costOfSubstitution(char a, char b) {

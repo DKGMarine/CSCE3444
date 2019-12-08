@@ -46,7 +46,15 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="com.example.movierater.ResultsAlt"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="com.example.movierater.favorites"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.movierater.Movie"
             android:screenOrientation="portrait" >
         </activity>
 

@@ -7,8 +7,7 @@
     android:paddingRight="45dp"
     android:paddingLeft="45dp"
     android:id="@+id/main"
-    android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    android:background="#FFFFFF" >
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
