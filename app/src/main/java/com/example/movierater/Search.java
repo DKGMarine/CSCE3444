@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
@@ -19,9 +20,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.lang.String;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -42,6 +49,9 @@ public class Search extends AppCompatActivity{
     Movie m;
     RelativeLayout search_id;
 
+    //for favorites list
+    ArrayList<Integer> favMovieIds;
+    ArrayList<Movie> favMovies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -63,15 +73,72 @@ public class Search extends AppCompatActivity{
         m = new Movie();
         final Levenshtein_Searc fun = new Levenshtein_Searc();
         final Query query =  myRef.orderByChild("title");
+
+        favMovieIds = new ArrayList<>();
+        favMovies = new ArrayList<>();
+
+
+        //favorites list button click listener
         favorites_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                startActivity(new Intent(Search.this, favorites.class));
-                //this needs to send either an arraylist of movie id's, or the user id
+
+                favMovieIds = loadFavorites();
+
+                /*
+                //for testing
+                if(favMovieIds.size() == 0) {
+                    for (int i = 0; i < 10; i++) {
+                        favMovieIds.add(i + 1);
+                    }
+                }
+                // */
+
+                //get movies
+                for(int i = 0; i < favMovieIds.size(); i++) {
+
+                    final int ID = i;
+
+                    Query query = myRef.orderByChild("movie_id");
+
+                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+
+                                m = snapshot.getValue(Movie.class);
+
+                                if(m.movie_id == favMovieIds.get(ID)) {
+                                    favMovies.add(m);
+                                }
+
+                            }
+
+                            if(favMovies.size() == favMovieIds.size()) {
+
+                                Intent intentFave = new Intent(Search.this, favorites.class);
+                                intentFave.putExtra("MovieList", favMovies);
+                                startActivity(intentFave);
+
+                            }
+
+                        }//onDataChange
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }//onCancelled
+                    });//ValueEventListener
+
+                }//for
+
+
             }
 
         });
 
+
+        //search button clickc listener
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -154,7 +221,42 @@ public class Search extends AppCompatActivity{
 
 
 
-}
+    }//onCreate
+
+    public ArrayList<Integer> loadFavorites() {
+        ArrayList<Integer> toReturn = new ArrayList<>();
+
+        FileInputStream inStream = null;
+
+        try {
+            inStream = openFileInput("favoritesList.txt");
+            InputStreamReader isr = new InputStreamReader(inStream);
+            BufferedReader br = new BufferedReader(isr);
+            StringBuilder sb = new StringBuilder();
+            String favListStr;
+
+            while((favListStr = br.readLine()) != null) {
+                toReturn.add(Integer.valueOf(favListStr));
+            }
+
+        } catch (FileNotFoundException e) {//openFileInput
+            Toast.makeText(this,  "Read Error: Favorites List", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        } catch (IOException e) {//br.readLine
+            e.printStackTrace();
+        } finally {
+            if (inStream != null) {
+                try {
+                    inStream.close();
+                } catch (IOException e) {//inStream.close
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return toReturn;
+    }//loadFavorites
+
 }
 
 

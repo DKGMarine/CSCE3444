@@ -7,15 +7,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Results extends AppCompatActivity{
     // imageView = findViewById(R.id.imageView);
     ImageView imageType;
     android.widget.Button return_search;
+    android.widget.Button addFave;
 
     String url;
+
+    Movie m;
 
     EditText title,director, duration, rating, release, netflix, hulu, prime, hbo, youtube, google;
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +40,11 @@ public class Results extends AppCompatActivity{
         catch (NullPointerException e){}
         setContentView(R.layout.results);
         imageType=findViewById(R.id.imag);
-        Movie m = (Movie) getIntent().getSerializableExtra("Movie");
+        m = (Movie) getIntent().getSerializableExtra("Movie");
         url = m.image;
         //url = "https://firebasestorage.googleapis.com/v0/b/movierater-e19d2.appspot.com/o/Interstellar.jpg?alt=media&token=f88715f2-abb3-4f26-9171-bf0c5c4db050";
         Glide.with(getApplicationContext()).load(url).into(imageType);
+
 
         //image = findViewById(R.id.image);
         title = findViewById(R.id.title);
@@ -46,6 +59,7 @@ public class Results extends AppCompatActivity{
         youtube = findViewById(R.id.youtube);
         google = findViewById(R.id.google);
         return_search = findViewById(R.id.return_search);
+        addFave = findViewById(R.id.add_to_favorites);
 
         //image.setText(m.image);
         title.setText("Title - " + m.title);
@@ -75,13 +89,45 @@ public class Results extends AppCompatActivity{
             }
         });
 
+        addFave.setOnClickListener(new View.OnClickListener() {
 
 
-    }
+            @Override
+            public void onClick(View view) {
 
+                saveFavorite();
+                addFave.setEnabled(false);
 
+            }
+        });
 
+    }//onCreate
 
+    public void saveFavorite() {
 
+        FileOutputStream out = null;
 
-}
+        try {
+            out = openFileOutput("favoritesList.txt", MODE_APPEND);
+            out.write(Integer.toString(m.movie_id).getBytes());
+            out.write("\n".getBytes());
+
+            Toast.makeText(this, m.title + " added to favorites list.", Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
+            Toast.makeText(this, "Write Error: Favorites List", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(out != null) {
+                try {
+                    out.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }//saveFavorite
+
+}//Results class

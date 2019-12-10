@@ -21,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 
 public class Registration extends AppCompatActivity {
 
@@ -34,6 +36,8 @@ public class Registration extends AppCompatActivity {
     long maxid=0;
     int logic = 0;
     int wait = 0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
