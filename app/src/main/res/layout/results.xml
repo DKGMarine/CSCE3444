@@ -7,6 +7,7 @@
 
     android:layout_alignParentEnd="false"
     android:layout_alignParentBottom="false"
+    android:id="@+id/results_id"
     tools:context=".Results">
 
     <ImageView

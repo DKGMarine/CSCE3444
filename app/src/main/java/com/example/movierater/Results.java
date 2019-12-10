@@ -21,6 +21,11 @@ public class Results extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.results);
         imageType=findViewById(R.id.imag);
         Movie m = (Movie) getIntent().getSerializableExtra("Movie");

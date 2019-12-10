@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bassammetwally/AndroidFinal/CSCE3444/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml",
+            "outputFile": "/Users/bassammetwally/Weston/CSCE3444/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "/Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/2179ff30d945bcdec0c9a644108ab0bd/jetified-play-services-basement-17.0.0/res/values-ro/values.xml",

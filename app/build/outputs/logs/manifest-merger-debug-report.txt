@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/f5cee04665f635392fbc3a078a89e818/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.airbnb.android:lottie:3.3.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/b058ca5ea0e83646dde158dad15b27a6/lottie-3.3.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/4b85e657826d1454f512a97b2bd18921/appcompat-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -51,29 +51,29 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/bassammetwally/
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/f5e5093a6d2ffb564f346d2769a020dc/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/c92e9c6549150a4bd8eb347f54ac769d/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/6df0cf79b64fd2c26bf8b27a76ce287b/firebase-database-collection-17.0.0/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
 	package
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:3:5-37
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:4:5-51
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:4:5-51
 	android:versionCode
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:1-48:12
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:1-59:12
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:2:11-69
 	tools:ignore
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:5:5-44
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:5:5-44
 application
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:7:5-46:19
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:7:5-57:19
 MERGED from [com.google.android.material:material:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/f5cee04665f635392fbc3a078a89e818/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/f5cee04665f635392fbc3a078a89e818/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.airbnb.android:lottie:3.3.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/b058ca5ea0e83646dde158dad15b27a6/lottie-3.3.0/AndroidManifest.xml:9:5-20
@@ -107,63 +107,75 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/bassammetwally/.
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/1bd162d1e9982c51999cbe410f0d807a/core-1.0.0/AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:11:9-41
 	android:fullBackupContent
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:12:9-54
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:14:9-40
 activity#com.example.movierater.MainActivity
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:15:9-22:20
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:15:9-22:20
 	android:screenOrientation
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:16:13-49
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:16:13-49
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:15:19-47
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:15:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:20:27-74
 activity#com.example.movierater.Registration
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:24:9-27:20
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:24:9-27:20
 	android:screenOrientation
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:25:13-49
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:25:13-49
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:24:19-69
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:24:19-69
 activity#com.example.movierater.Search
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:29:9-32:20
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:29:9-32:20
 	android:screenOrientation
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:30:13-49
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:30:13-49
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:29:19-63
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:29:19-63
 activity#com.example.movierater.Results
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:34:9-37:20
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:34:9-37:20
 	android:screenOrientation
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:35:13-49
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:35:13-49
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:34:19-64
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:34:19-64
+activity#com.example.movierater.ResultsAlt
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:39:9-42:20
+	android:screenOrientation
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:40:13-49
+	android:name
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:39:19-67
 activity#com.example.movierater.favorites
-ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:39:9-42:20
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:45:9-48:20
 	android:screenOrientation
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:40:13-49
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:46:13-49
 	android:name
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml:39:19-66
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:45:19-66
+activity#com.example.movierater.Movie
+ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:51:9-54:20
+	android:screenOrientation
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:52:13-49
+	android:name
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml:51:19-62
 uses-sdk
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/f5cee04665f635392fbc3a078a89e818/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/f5cee04665f635392fbc3a078a89e818/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.airbnb.android:lottie:3.3.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/b058ca5ea0e83646dde158dad15b27a6/lottie-3.3.0/AndroidManifest.xml:5:5-7:41
@@ -258,16 +270,16 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/bassammetwally/.gradl
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/c92e9c6549150a4bd8eb347f54ac769d/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/6df0cf79b64fd2c26bf8b27a76ce287b/firebase-database-collection-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/6df0cf79b64fd2c26bf8b27a76ce287b/firebase-database-collection-17.0.0/AndroidManifest.xml:5:5-44
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		ADDED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/bassammetwally/AndroidFinal/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bassammetwally/Weston/CSCE3444/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-database:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/679a579fb7ecf5dbdf294cebebde9e32/firebase-database-19.1.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.0] /Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/bcdf615694a8182e986fae1018adaadc/firebase-storage-19.1.0/AndroidManifest.xml:26:5-79

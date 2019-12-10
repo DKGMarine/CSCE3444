@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bassammetwally/AndroidFinal/CSCE3444/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
+            "outputFile": "/Users/bassammetwally/Weston/CSCE3444/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
             "map": [
                 {
                     "source": "/Users/bassammetwally/.gradle/caches/transforms-2/files-2.1/951b5e7f354daaaf8db57d3e12181016/play-services-base-17.0.0/res/values-or/values.xml",
